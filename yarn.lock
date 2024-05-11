@@ -1046,6 +1046,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/roboto@^5.0.13":
+  version "5.0.13"
+  resolved "https://registry.npmjs.org/@fontsource/roboto/-/roboto-5.0.13.tgz"
+  integrity sha512-j61DHjsdUCKMXSdNLTOxcG701FWnF0jcqNNQi2iPCDxU8seN/sMxeh62dC++UiagCWq9ghTypX+Pcy7kX+QOeQ==
+
 "@google/generative-ai@^0.11.1":
   version "0.11.1"
   resolved "https://registry.npmjs.org/@google/generative-ai/-/generative-ai-0.11.1.tgz"

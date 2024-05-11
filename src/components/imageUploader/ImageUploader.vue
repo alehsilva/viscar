@@ -1,20 +1,27 @@
 <template>
- <div>
-   <DropzoneContent>
-  <vue-dropzone @vdropzone-success="handleDropzoneSuccess" id="dropzone"
-  :options="dropzoneOptions" :useCustomSlot=true>
-      <h3 v-if="isVisibleText" class="dropzone-custom-title">
-        Arraste e solte as imagens do seu veículo!
-      </h3>
-      <div v-if="isVisibleText" class="subtitle">
-        ...ou clique e selecione do seu computador
-      </div>
-      <div class="dz-image">
-        <div data-dz-thumbnail-bg></div>
-      </div>
-    </vue-dropzone>
-  </DropzoneContent>
- </div>
+  <div>
+    <DropzoneContent>
+      <vue-dropzone @vdropzone-success="handleDropzoneSuccess" id="dropzone"
+      :options="dropzoneOptions" :useCustomSlot=true>
+        <div class="drop">
+          <div class="img-cloud" v-if="isVisibleText">
+            <img src="@/assets/images/upload-cloud.png" alt="">
+          </div>
+          <div v-if="isVisibleText" class="text">
+            <h3 class="dropzone-custom-title">
+              Arraste e solte as fotos do seu veículo aqui
+            </h3>
+            <div class="subtitle">
+              ...ou clique e selecione do seu computador.
+            </div>
+          </div>
+        </div>
+        <div class="dz-image">
+          <div data-dz-thumbnail-bg></div>
+        </div>
+      </vue-dropzone>
+    </DropzoneContent>
+  </div>
 </template>
 
 <script>
@@ -68,13 +75,23 @@ export default {
 
 <style>
 .vue-dropzone {
+  width: 100%;
   height: 300px;
   overflow: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2px;
+}
+
+.img-cloud img{
+  max-width: 100px
+}
+
+.drop {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 }
 
 .dz-details {
@@ -93,9 +110,8 @@ export default {
   display: none;
 }
 
-.dz-preview img{
+.dz-preview img {
   width: 50px;
   height: 50px;
 }
-
 </style>

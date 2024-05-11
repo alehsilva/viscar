@@ -1,0 +1,55 @@
+@import '../../assets/styles-color.css';
+
+.primary {
+    background-color: var(--secondary);
+    border: none;
+    padding: 16px 40px;
+    color: #FFF;
+    border-radius: 8px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: noral;
+    height: 50px;
+    cursor: pointer;
+}
+
+.primary:hover {
+    opacity: 0.9;
+}
+
+.primary img {
+    margin: 0 16px 0 0;
+    padding: 0;
+    position: relative;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    fill: white;
+}
+
+.secondary {
+    background-color: #EBF0F3;
+    border: 1px solid var(--secondary);
+    padding: 16px 32px;
+    color: var(--secondary);
+    border-radius: 8px;
+    filter: drop-shadow(1px 4px 6px #787878);
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: noral;
+    height: 56px;
+    cursor: pointer;
+}
+
+.secondary:hover {
+    opacity: 0.7;
+}
+
+.secondary img {
+    margin: 0 16px 0 0;
+    padding: 0;
+    position: relative;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+}

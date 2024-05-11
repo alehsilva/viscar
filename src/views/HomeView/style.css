@@ -1,0 +1,149 @@
+.body {
+    display: flex;
+    width: 100dvw;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo img{
+    max-width: 418px;
+    max-height: 222px;
+    min-width: 200px;
+    min-height: 100px;
+    width: 100%;
+}
+
+.text {
+    max-width: 530px;
+}
+
+.text h1 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.text p {
+    font-weight: normal;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: #CEDDE5;
+    text-wrap: wrap;
+    text-align: left;
+}
+
+.gadget {
+    margin-bottom: 16px;
+}
+
+.gadget img {
+    max-width: 600px;
+    min-width: 300px;
+    width: 100%;
+}
+
+.wrapper-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .body {
+        width: 100%;
+        height: 100%;
+    }
+    .content {
+        width: 96%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .logo {
+        width: 96%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 64px;
+    }
+    .logo img{
+        max-width: 300px;
+        min-width: 200px;
+        width: 100%;
+    }
+
+    .text {
+        display: flex;
+        justify-self: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }    
+    .text p {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+        word-wrap: break-word; /* quebra de palavra */
+        overflow-wrap: break-word; /* fallback para navegadores mais antigos */
+    }
+
+    .text h1 {
+        width: 100%;
+        word-wrap: break-word; /* quebra de palavra */
+        overflow-wrap: break-word; /* fallback para navegadores mais antigos */
+        max-width: 300px;
+    }
+
+    .gadget {
+        width: 100%;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gadget img {
+        max-width: 400px;
+    }
+    
+    .wrapper-video {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 64px;
+    }
+
+    .player img {
+        width: 100%;
+        max-width: 400px;
+        min-height: 250px;
+    }
+    
+    .button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
