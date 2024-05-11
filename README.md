@@ -15,6 +15,10 @@ Plataforma SaaS Intuitiva: Acesso fácil e intuitivo à plataforma online, para 
 💻 Simule uma Vistoria!
 Experimente o poder do VisCar em nosso site! Oferecemos uma simulação gratuita para você testar a análise de imagens e visualizar um exemplo de relatório gerado pela nossa IA.
 
+
+https://github.com/alehsilva/viscar/assets/46385659/192e5404-42ba-4107-9eb1-7851b26bd296
+
+
 🖼️ Telas da Plataforma
 Landing Page:
 ![image](https://github.com/alehsilva/viscar/assets/46385659/38457ed1-fddb-4503-8898-a894fbc7d082)
