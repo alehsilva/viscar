@@ -23,7 +23,7 @@
             <div><b>FIPE</b>: <span>{{ infoVehicle?.Fipe }}</span></div>
           </div>
           <div class="h2-vehicle">Nível de gravidade dos problemas</div>
-          <VehicleQualification :qualification="Number(infoVehicle?.Danos)"></VehicleQualification>
+          <VehicleQualification :qualification="infoVehicle?.Danos"></VehicleQualification>
           <div class="buttons">
             <ButtonComponent
               @child-clicked="handleClick"
