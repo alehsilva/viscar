@@ -2,8 +2,7 @@
 import styled from 'vue-styled-components';
 
 export const DropzoneContent = styled.div`
-  max-width: 700px;
-  min-width: 200px;
+  max-width: 800px;
   width: 100%;
   height: 250px;
   background: transparent;

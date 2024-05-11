@@ -1,7 +1,8 @@
 <template>
   <div>
     <DropzoneContent>
-      <vue-dropzone @vdropzone-success="handleDropzoneSuccess" id="dropzone"
+      <vue-dropzone @vdropzone-success="handleDropzoneSuccess"
+      @vdropzone-files-added="handleDropzoneAdd" id="dropzone"
       :options="dropzoneOptions" :useCustomSlot=true>
         <div class="drop">
           <div class="img-cloud" v-if="isVisibleText">
@@ -21,6 +22,9 @@
         </div>
       </vue-dropzone>
     </DropzoneContent>
+    <div class="length-imgs">
+      <div>{{ this.imgList?.length + ' arquivos de ' + 5 }}</div>
+    </div>
   </div>
 </template>
 
@@ -48,11 +52,13 @@ export default {
     };
   },
   methods: {
+    async handleDropzoneAdd() {
+      this.isVisibleText = false;
+    },
     async handleErrorMultiples(files, message) {
       console.error(files, message);
     },
     async handleDropzoneSuccess(file) {
-      this.isVisibleText = !this.imgList?.length;
       const imagePart = await fileToGenerativePart(file);
       this.imgList.push(imagePart);
 
@@ -81,17 +87,33 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 16px;
   align-items: center;
 }
 
 .img-cloud img{
-  max-width: 100px
+  max-width: 80px
+}
+
+.text {
+  width: 100%;
+  font-size: 14px
 }
 
 .drop {
   display: flex;
   flex-direction: row;
   gap: 16px;
+  width: 96%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.length-imgs {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .dz-details {
