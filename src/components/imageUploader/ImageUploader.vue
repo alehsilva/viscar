@@ -59,6 +59,9 @@ export default {
       console.error(files, message);
     },
     async handleDropzoneSuccess(file) {
+      if (this.imgList?.length >= 5) {
+        this.$emit('add', true);
+      }
       const imagePart = await fileToGenerativePart(file);
       this.imgList.push(imagePart);
 
@@ -71,7 +74,8 @@ export default {
           text = text.replace('json', ' ');
           text = text.replace('```', ' ');
           text = text.replace('.', ' ');
-          console.log(JSON.parse(text));
+          // console.log(JSON.parse(text));
+          this.$emit('response-ai', text);
         });
       }
     },

@@ -1,0 +1,27 @@
+@import '../../assets/styles-color.css';
+
+.loading {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.loading img {
+    animation: spin 5s linear infinite; /* Ajuste a duração e o estilo da animação */
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

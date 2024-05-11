@@ -3,9 +3,11 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import ImageUploader from './components/imageUploader/ImageUploader.vue';
+import LoadingComponent from './components/loading/LoadingComponent.vue';
 
 Vue.config.productionTip = false;
 Vue.component('ImageUploader', ImageUploader);
+Vue.component('LoadingComponent', LoadingComponent);
 // Vue.use(VueStyledComponents);
 
 new Vue({
