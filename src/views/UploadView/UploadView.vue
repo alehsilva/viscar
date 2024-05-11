@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content-upload">
     <LoadingComponent :isVisible="isVisible"></LoadingComponent>
     <ImageUploader @response-ai="onResponseAi" @add="onAddImgs"></ImageUploader>
     <img :src="img" alt="">
@@ -23,8 +23,7 @@ export default {
   methods: {
     onResponseAi() {
       setTimeout(() => {
-        this.isVisible = false;
-        // console.log(JSON.parse(localStorage.getItem('img')).inlineData?.data);
+        this.$router.push('vehicle');
       }, 2000);
     },
     async onAddImgs() {

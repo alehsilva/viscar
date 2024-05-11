@@ -1,7 +1,7 @@
 <!-- eslint-disable no-irregular-whitespace -->
 <template>
   <div class="body">
-    <div class="content">
+    <div class="content-home">
       <div class="wrapper">
         <div class="logo">
           <img src="@/assets/images/logo_fundo_branco.png" alt="" />
