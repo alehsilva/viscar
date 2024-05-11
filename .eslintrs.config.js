@@ -10,6 +10,7 @@ export default [
     rules: {
       // override/add rules settings here, such as:
       "no-unused-vars": "off",
+      "unicorn/consistent-line-endings": ["error", "LF"],
       operatorLinebreak: 0,
     },
   },
