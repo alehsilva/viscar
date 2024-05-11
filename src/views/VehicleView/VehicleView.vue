@@ -23,7 +23,7 @@
             <div><b>FIPE</b>: <span>{{ infoVehicle?.Fipe }}</span></div>
           </div>
           <div class="h2-vehicle">Nível de gravidade dos problemas</div>
-          <VehicleQualification :qualification="infoVehicle.Danos"></VehicleQualification>
+          <VehicleQualification :qualification="Number(infoVehicle?.Danos)"></VehicleQualification>
           <div class="buttons">
             <ButtonComponent
               @child-clicked="handleClick"
@@ -59,7 +59,7 @@ export default {
     return {
       infoVehicle: JSON.parse(JSON.parse(localStorage.getItem('vehicleInformation'))),
       imgUrl: `data:image/jpeg;base64,${
-        JSON.parse(localStorage.getItem('img')).inlineData?.data
+        JSON.parse(localStorage.getItem('imgVehicleMain'))?.inlineData?.data
       }`,
     };
   },
