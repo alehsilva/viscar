@@ -27,7 +27,7 @@ Detalhes do Veículo:
 
 🚀 Junte-se à Revolução das Vistorias!
 O VisCar é a solução ideal para empresas que buscam modernizar suas vistorias, reduzir custos e aumentar a eficiência. Entre em contato conosco para saber mais sobre nossos planos e como podemos ajudar sua empresa.
-[[Link para a página de contato do VisCar]](https://www.linkedin.com/in/allexandreramos/)
+[[https://www.linkedin.com/in/allexandreramos/]](
 
 🛠️ Para Desenvolvedores
 Este repositório contém o código fonte do VisCar, incluindo:
@@ -42,5 +42,6 @@ Para rodar:
 
 Necessario criar um arquivo chamado apiKey.ts com a variavel: export const API_KEY = 'SUA CHAVE AQUI'
 Caso de erro no tipo de CRLF para LF segue abaixo print de como corrigir:
+
 ![image](https://github.com/alehsilva/viscar/assets/46385659/a777ae75-c48b-4fed-b6d3-4c13d67852fa)
 
