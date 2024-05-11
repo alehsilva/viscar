@@ -1,0 +1,102 @@
+@import '../../assets/styles-color.css';
+
+.body-vehicle {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-vehicle {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-vehicle {
+    margin-bottom: 60px;
+}
+
+.logo-vehicle img {
+    max-width: 300px;
+}
+
+.vehicle-info {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 8px;
+}
+
+.vehicle-img {
+    width: 60%;
+}
+
+.vehicle-img img{
+    width: 100%;
+    max-height: 500px;
+    border-radius: 8px;
+}
+
+.vehicle-info {
+    background-color: #EBF0F3;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.vehicle-data {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.main-data {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.main-data div{
+    color: var(--third);
+    font-size: 12px;
+}
+
+.h1-vehicle {
+    color: var(--third);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.h2-vehicle {
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 1200px) {
+    .vehicle-info {
+        flex-direction: column;
+    }
+
+    .vehicle-data {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

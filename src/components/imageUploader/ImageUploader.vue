@@ -63,17 +63,19 @@ export default {
         this.$emit('add', true);
       }
       const imagePart = await fileToGenerativePart(file);
+      localStorage.setItem('imgVehicleMain', JSON.stringify(this.imgList[0]));
       this.imgList.push(imagePart);
 
       if (this.imgList.length >= 7) {
         const prompt = `analise essas imagens que pertencem apenas a um veiculo e monte um json com os campos caso não souber alguma informação basta deixar o campo em branco
-        Modelo:, Marca:, Cor: Danos: de 0 a 10, Ano:, Câmbio:, Carroceria:, Combustível:, Potencia:, Motor:, Há Danos?:,
-        tudo isso em formato JSON sem pontos do começo e sem escrever json também tomar cuidado com espaços no começo do arquivo apenas o arquivo mesmo`;
+        Modelo:, Marca:, Cor: Danos: de 0 a 5, Ano:, Cambio:, Carroceria:, Combustivel:, Potencia:, Motor:, HaDanos?:, Fipe:,
+        tudo isso em formato JSON sem pontos do começo e sem escrever json também tomar cuidado com espaços no começo do arquivo apenas o arquivo mesmo sem acentos e espaços entre as keys do json`;
         generateContent(prompt, this.imgList).then((res) => {
           let text = res;
           text = text.replace('json', ' ');
           text = text.replace('```', ' ');
           text = text.replace('.', ' ');
+          localStorage.setItem('vehicleInformation', JSON.stringify(text));
           // console.log(JSON.parse(text));
           this.$emit('response-ai', text);
         });

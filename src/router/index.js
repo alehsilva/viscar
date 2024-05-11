@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VehicleView from '@/views/VehicleView/VehicleView.vue';
 import HomeView from '../views/HomeView/HomeView.vue';
 import UploadView from '../views/UploadView/UploadView.vue';
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/upload',
     name: 'upload',
     component: UploadView,
+  },
+  {
+    path: '/vehicle',
+    name: 'vehicle',
+    component: VehicleView,
   },
 ];
 

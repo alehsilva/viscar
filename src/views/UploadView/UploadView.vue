@@ -2,6 +2,7 @@
   <div class="content">
     <LoadingComponent :isVisible="isVisible"></LoadingComponent>
     <ImageUploader @response-ai="onResponseAi" @add="onAddImgs"></ImageUploader>
+    <img :src="img" alt="">
   </div>
 </template>
 
@@ -16,16 +17,17 @@ export default {
   data() {
     return {
       isVisible: false,
+      img: null,
     };
   },
   methods: {
-    onResponseAi(data) {
+    onResponseAi() {
       setTimeout(() => {
         this.isVisible = false;
-        console.log(data);
+        // console.log(JSON.parse(localStorage.getItem('img')).inlineData?.data);
       }, 2000);
     },
-    onAddImgs() {
+    async onAddImgs() {
       this.isVisible = true;
     },
   },
