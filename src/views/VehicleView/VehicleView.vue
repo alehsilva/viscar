@@ -28,7 +28,7 @@
             <ButtonComponent
               @child-clicked="handleClick"
               buttonSecondary
-              icon="icon-button-arrow.png"
+              icon="share.png"
               label="COMPARTILHAR"
             >
             </ButtonComponent>

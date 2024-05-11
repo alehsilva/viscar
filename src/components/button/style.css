@@ -3,13 +3,13 @@
 .primary {
     background-color: var(--secondary);
     border: none;
-    padding: 16px 40px;
+    padding: 14px 22px;
     color: #FFF;
     border-radius: 8px;
     font-family: Roboto, sans-serif;
     font-size: 14px;
-    font-weight: noral;
-    height: 50px;
+    font-weight: normal;
+    
     cursor: pointer;
 }
 

@@ -14,7 +14,13 @@
 }
 
 .loading img {
-    animation: spin 5s linear infinite; /* Ajuste a duração e o estilo da animação */
+  animation: spin 5s linear infinite; /* Ajuste a duração e o estilo da animação */
+}
+@media screen and (max-width: 1000px) {
+  .loading img{
+    width: 150px;
+    height: 150px;
+  }
 }
 
 @keyframes spin {

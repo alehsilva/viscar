@@ -25,6 +25,15 @@
     <div class="length-imgs">
       <div>{{ this.imgList?.length + ' arquivos de ' + 5 }}</div>
     </div>
+    <div class="btn-send-img">
+      <ButtonComponent
+        @child-clicked="handleClick"
+        buttonPrimary
+        icon="paper.png"
+        label="ENVIAR PARA ANALISE"
+      >
+      </ButtonComponent>
+    </div>
   </div>
 </template>
 
@@ -33,12 +42,14 @@ import VueDropzone from 'vue2-dropzone';
 import fileToGenerativePart from '../../utils/fileUtils';
 import generateContent from '../../services/generativeAI.ts';
 import { DropzoneContent } from './imageUploader.styles.ts';
+import ButtonComponent from '../button/Button.vue';
 
 export default {
   name: 'ImageUploader',
   components: {
     DropzoneContent,
     VueDropzone,
+    ButtonComponent,
   },
   data() {
     return {
@@ -52,6 +63,9 @@ export default {
     };
   },
   methods: {
+    handleClick() {
+      this.startAnalysis();
+    },
     async handleDropzoneAdd() {
       this.isVisibleText = false;
     },
@@ -59,14 +73,17 @@ export default {
       console.error(files, message);
     },
     async handleDropzoneSuccess(file) {
-      if (this.imgList?.length >= 5) {
+      /* if (this.imgList?.length >= 4) {
         this.$emit('add', true);
-      }
+      } */
       const imagePart = await fileToGenerativePart(file);
       localStorage.setItem('imgVehicleMain', JSON.stringify(this.imgList[0]));
       this.imgList.push(imagePart);
+    },
 
-      if (this.imgList.length >= 7) {
+    async startAnalysis() {
+      if (this.imgList.length >= 5) {
+        this.$emit('add', true);
         const prompt = `analise essas imagens que pertencem apenas a um veiculo e monte um json com os campos caso não souber alguma informação basta deixar o campo em branco
         Modelo:, Marca:, Cor: Danos: de 0 a 5, Ano:, Cambio:, Carroceria:, Combustivel:, Potencia:, Motor:, HaDanos?:, Fipe:,
         tudo isso em formato JSON sem pontos do começo e sem escrever json também tomar cuidado com espaços no começo do arquivo apenas o arquivo mesmo sem acentos e espaços entre as keys do json`;
@@ -88,10 +105,11 @@ export default {
 <style>
 .vue-dropzone {
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   overflow: auto;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
   align-items: center;
@@ -139,7 +157,27 @@ export default {
 }
 
 .dz-preview img {
-  width: 50px;
-  height: 50px;
+  width: 230px;
+  height: 230px;
+}
+
+.btn-send-img{
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .vue-dropzone{
+    flex-direction: column;
+  }
+  .drop{
+    flex-direction: column;
+  }
+  .dz-preview img {
+    width: 150px;
+    height: 150px;
+  }
 }
 </style>

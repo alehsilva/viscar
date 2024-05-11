@@ -1,6 +1,6 @@
 <template>
   <div class="loading" v-if="isVisible">
-    <div>
+    <div class="wheel-container">
       <img src="@/assets/images/wheelloading.png" alt="" />
     </div>
     <h1>{{loadingMessage}}</h1>
@@ -44,4 +44,6 @@ export default {
   },
 };
 </script>
-<style src="./style.css"></style>
+<style src="./style.css">
+
+</style>

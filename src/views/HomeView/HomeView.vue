@@ -47,8 +47,8 @@ import ButtonComponent from '../../components/button/Button.vue';
 export default {
   name: 'HomeView',
   methods: {
-    handleClick(data) {
-      console.log(data);
+    handleClick() {
+      this.$router.push('upload');
     },
   },
   components: {
