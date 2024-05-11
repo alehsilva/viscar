@@ -39,7 +39,6 @@ Observação: Substitua os espaços entre colchetes pelas informações e imagen
 
 
 Para rodar:
-
 Necessario criar um arquivo chamado apiKey.ts com a variavel: export const API_KEY = 'SUA CHAVE AQUI'
 Caso de erro no tipo de CRLF para LF segue abaixo print de como corrigir:
 
