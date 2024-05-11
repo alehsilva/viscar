@@ -17,7 +17,7 @@
 export default {
   name: 'VehicleQualification',
   props: {
-    qualification: Number,
+    qualification: String,
   },
 };
 </script>
